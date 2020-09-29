@@ -1,0 +1,85 @@
+.fa {
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    direction: ltr;
+    font-size: 2rem;
+}
+
+.panel {
+    position: relative;
+    margin: 10px;
+    background-color: #787c99;
+    color: white;
+    width: 400px;
+    height: 220px;
+    display: inline-block;
+}
+
+.panel_unlocked {
+    color: white;
+    background-color: #83AF9B;
+    transition: color 1s ease-out, background 1s ease-out;
+}
+
+.panel_unlocked .content::after {
+    content: 'Match';
+    /* font-size: 0.8rem;
+    color: white;
+    z-index: 1;
+    left: 6em;
+    bottom: 1em;
+    transition: all 0.2s 0.2s ease-out; */
+}
+
+.panel_still_locked {
+    color: white;
+    background-color: #FE4365;
+    transition: color 1s ease-out, background 1s ease-out;
+}
+
+.panel_still_locked .content::after {
+    content: 'not match';
+
+}
+
+/* .panel_still_locked {
+    animation-name: still_locked_change_background;
+    animation-duration: 1.5s;
+}
+
+@keyframes still_locked_change_background {
+    0%{background-color: #FC9D9A;}
+    50%{background-color: #FE4365;}
+    100%{background-color: #FC9D9A;}
+}
+
+.panel_still_locked .content::after {
+
+    animation-name: still_locked_change;
+    animation-duration: 1.5s;
+}
+
+@keyframes still_locked_change {
+    0%{content: 'Unmatch'; color: white;}
+    50%{content: 'Unmatch'; color: white;}
+    100%{content: 'Unmatch'; color: white;}
+} */
+
+.content {
+    text-align: center;
+    line-height: 215px;
+}
+
+.content::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: 'Ready';
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 2em;
+    text-transform: uppercase;
+}
